@@ -1,0 +1,18 @@
+let n = read_line();;
+let m = read_line();;
+let k = read_line();;
+ 
+let rec f n m k =
+if n = "paper" then if m = "paper" then if k = "paper" then print_string "?" else if k = "rock" then print_string "?" else print_string "S"
+else if m = "rock" then if k = "paper" then print_string "?" else if k = "rock" then print_string "F" else print_string "?"
+else if k = "paper" then print_string "M" else if k = "rock" then print_string "?" else print_string "?"
+ 
+else if n = "rock" then if m = "rock" then if k = "paper" then print_string "S" else if k = "rock" then print_string "?" else print_string "?"
+else if m = "paper" then if k = "paper" then print_string "?" else if k = "rock" then print_string "M" else print_string "?"
+else if k = "paper" then print_string "?" else if k = "rock" then print_string "?" else print_string "F"
+ 
+else if m = "paper" then if k = "paper" then print_string "F" else if k = "rock" then print_string "?" else print_string "S"
+else if m = "rock" then if k = "paper" then print_string "?" else if k = "rock" then print_string "?" else print_string "M"
+else if k = "paper" then print_string "?" else if k = "rock" then print_string "S" else print_string "?";;
+ 
+f m n k;;
