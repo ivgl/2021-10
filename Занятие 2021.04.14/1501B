@@ -1,0 +1,16 @@
+(*Сделал рабочий код, ответы которого совпадают с тем, что показывали в описании, но не знаю как делать вызов, поэтому не смог сдать в codeforces*)
+
+let rec mat n l=
+match n with
+a::b -> if a+1 < 10 then mat b ((a+1)::l) else mat b (1::0::l)
+| _ -> l ;;
+
+let rec len l n =
+match l with
+a::b -> len b (n+(String.length (string_of_int a)))
+| _ -> print_int n;;
+
+let rec f n m =
+if m>0 then f (mat n []) (m-1) else len n 0;;
+
+f [2;1;2] 9
