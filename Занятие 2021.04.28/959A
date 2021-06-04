@@ -1,0 +1,6 @@
+let n = print_int();;
+ 
+let rec f n =
+If not mod 2 = 0 then print_string "Mahmoud" else print_string "Ehab";;
+ 
+f n;;
